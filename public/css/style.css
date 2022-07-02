@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@-webkit-keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blockAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blockAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes marginAnimation {
+  from {
+    margin: 0px 20px;
+    padding: 0px;
+  }
+  to {
+    margin: 0px 60px;
+    padding: 0px;
+  }
+}
+
+@keyframes marginAnimation {
+  from {
+    margin: 0px 20px;
+    padding: 0px;
+  }
+  to {
+    margin: 0px 60px;
+    padding: 0px;
+  }
+}
+
+@-webkit-keyframes charAppear {
+  from {
+    -webkit-filter: contrast(400%) grayscale(100%) brightness(0.2);
+            filter: contrast(400%) grayscale(100%) brightness(0.2);
+  }
+  to {
+    -webkit-filter: contrast(140%) grayscale(100%) brightness(1);
+            filter: contrast(140%) grayscale(100%) brightness(1);
+  }
+}
+
+@keyframes charAppear {
+  from {
+    -webkit-filter: contrast(400%) grayscale(100%) brightness(0.2);
+            filter: contrast(400%) grayscale(100%) brightness(0.2);
+  }
+  to {
+    -webkit-filter: contrast(140%) grayscale(100%) brightness(1);
+            filter: contrast(140%) grayscale(100%) brightness(1);
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #212121;
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  font-family: 'VT323', monospace;
+  font-size: 32px;
+  text-align: center;
+}
+
+body .container {
+  margin: auto;
+  padding: 0px;
+  background-color: #F6F6F6;
+  height: 100%;
+  aspect-ratio: 1;
+  display: block;
+}
+
+body .container.menuBG {
+  background-image: url("../material/scenario.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: contrast(1.2) grayscale(1) brightness(1);
+          filter: contrast(1.2) grayscale(1) brightness(1);
+  position: relative;
+}
+
+body .container.menuBG .spritePosition:nth-child(1) {
+  position: absolute;
+  height: 8%;
+  top: 25%;
+  left: 50%;
+}
+
+body .container.menuBG .spritePosition:nth-child(2) {
+  position: absolute;
+  height: 5%;
+  top: 34%;
+  left: 64%;
+}
+
+body .container.menuBG .spritePosition:nth-child(2):hover {
+  cursor: pointer;
+}
+
+body .container.menuBG .spritePosition:nth-child(3) {
+  position: absolute;
+  height: 5%;
+  top: 34%;
+  left: 70.5%;
+}
+
+body .container.menuBG .spritePosition:nth-child(3):hover {
+  cursor: pointer;
+}
+
+body .container.menuBG .spritePosition:nth-child(4) {
+  position: absolute;
+  height: 5%;
+  top: 34%;
+  left: 77%;
+}
+
+body .container.menuBG .spritePosition:nth-child(4):hover {
+  cursor: pointer;
+}
+
+body .container.menuBG .spritePosition:nth-child(5) {
+  position: absolute;
+  height: 8%;
+  top: 45%;
+  left: 70%;
+}
+
+body .container .selectorBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px auto;
+  padding: 120px 70px;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .container .selectorBlock .charSelector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 0px 30px;
+  padding: 0px;
+  opacity: 0;
+  -webkit-animation: blockAppear 1s steps(5) forwards;
+          animation: blockAppear 1s steps(5) forwards;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+body .container .selectorBlock .charSelector div {
+  margin: 0px 20px;
+  padding: 0px;
+  -webkit-animation: marginAnimation 1s steps(5) forwards;
+          animation: marginAnimation 1s steps(5) forwards;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+body .container .selectorBlock .charSelector div.charBlock {
+  width: 200px;
+  margin: 0 auto;
+}
+
+body .container .selectorBlock .charSelector div form {
+  border: 30px;
+  border-style: solid;
+  -o-border-image: url("../material/border.jpg") 33% stretch;
+     border-image: url("../material/border.jpg") 33% stretch;
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .selectorBlock .charSelector div form input {
+  margin: 10px 0px;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  font-size: 41.6px;
+  font-family: 'VT323', monospace;
+  border: 3px solid #F6F6F6;
+  background-color: #F6F6F6;
+}
+
+body .container .selectorBlock .charSelector div form input:hover {
+  border: 3px solid #212121;
+  cursor: pointer;
+}
+
+body .container .selectorBlock .charSelector div img {
+  -webkit-filter: contrast(400%) grayscale(100%) brightness(0.2);
+          filter: contrast(400%) grayscale(100%) brightness(0.2);
+  -webkit-animation: charAppear 1s steps(5) forwards;
+          animation: charAppear 1s steps(5) forwards;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+  height: 300px;
+}
+
+body .container .selectorBlock .type:first-child {
+  margin: auto;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: typing 2s steps(27) forwards;
+          animation: typing 2s steps(27) forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+body .container .selectorBlock .type:last-child {
+  margin: auto;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: typing 2s steps(18) forwards;
+          animation: typing 2s steps(18) forwards;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+
+body .container.table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+body .container.table .card {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  padding: 5px;
+}
+
+body .container.table .card img {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
